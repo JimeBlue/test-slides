@@ -44,12 +44,12 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
-transition: fade-out
----
+
+## transition: fade-out
 
 # What is Slidev?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+Testing one two three
 
 - 📝 **Text-based** - focus on the content with Markdown, and then style them later
 - 🎨 **Themable** - themes can be shared and re-used as npm packages
@@ -57,9 +57,7 @@ Slidev is a slides maker and presenter designed for developers, consist of the f
 - 🤹 **Interactive** - embed Vue components to enhance your expressions
 - 🎥 **Recording** - built-in recording and camera view
 - 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
+- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev <br> <br>
 
 Read more about [Why Slidev?](https://sli.dev/guide/why)
 
@@ -85,8 +83,9 @@ Here is another comment.
 -->
 
 ---
-transition: slide-up
-level: 2
+
+transition: slide-up level: 2
+
 ---
 
 # Navigation
@@ -95,25 +94,28 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 
 ## Keyboard Shortcuts
 
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
+|  |  |
+| --- | --- |
+| <kbd>right</kbd> / <kbd>space</kbd> | next animation or slide |
+| <kbd>left</kbd> / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
+| <kbd>up</kbd> | previous slide |
+| <kbd>down</kbd> | next slide |
 
 <!-- https://sli.dev/guide/animations.html#click-animation -->
+
 <img
   v-click
   class="absolute -bottom-9 -left-7 w-80 opacity-50"
   src="https://sli.dev/assets/arrow-bottom-left.svg"
   alt=""
 />
+
 <p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
-layout: two-cols
-layoutClass: gap-16
+
+layout: two-cols layoutClass: gap-16
+
 ---
 
 # Table of contents
@@ -131,8 +133,9 @@ The title will be inferred from your slide content, or you can override it with 
 <Toc text-sm minDepth="1" maxDepth="2" />
 
 ---
-layout: image-right
-image: https://cover.sli.dev
+
+layout: image-right image: https://cover.sli.dev
+
 ---
 
 # Code
@@ -155,6 +158,7 @@ doubled.value = 2
 <arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
 
 <!-- This allow you to embed external code blocks -->
+
 <<< @/snippets/external.ts#snippet
 
 <!-- Footer -->
@@ -185,8 +189,8 @@ Notes can also sync with clicks
 -->
 
 ---
-level: 2
----
+
+## level: 2
 
 # Shiki Magic Move
 
@@ -202,8 +206,8 @@ const author = reactive({
   books: [
     'Vue 2 - Advanced Guide',
     'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
+    'Vue 4 - The Mystery',
+  ],
 })
 ```
 
@@ -217,11 +221,11 @@ export default {
         books: [
           'Vue 2 - Advanced Guide',
           'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
+          'Vue 4 - The Mystery',
+        ],
+      },
     }
-  }
+  },
 }
 ```
 
@@ -234,10 +238,10 @@ export default {
       books: [
         'Vue 2 - Advanced Guide',
         'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
+        'Vue 4 - The Mystery',
+      ],
+    },
+  }),
 }
 ```
 
@@ -251,8 +255,8 @@ const author = {
   books: [
     'Vue 2 - Advanced Guide',
     'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
+    'Vue 4 - The Mystery',
+  ],
 }
 </script>
 ```
@@ -301,8 +305,8 @@ Also, HTML elements are valid:
 -->
 
 ---
-class: px-20
----
+
+## class: px-20
 
 # Themes
 
@@ -328,8 +332,7 @@ theme: seriph
 
 </div>
 
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
+Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
 
 ---
 
@@ -351,10 +354,7 @@ This shows up when you click the slide:
 
 <v-click>
 
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
+The <span v-mark.red="3"><code>v-mark</code> directive</span> also allows you to add <span v-mark.circle.orange="4">inline marks</span> , powered by [Rough Notation](https://roughnotation.com/):
 
 ```html
 <span v-mark.underline.orange>inline markers</span>
@@ -459,7 +459,9 @@ LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
 Inline $\sqrt{3x-1}+(1+x)^2$
 
 Block
-$$ {1|3|all}
+
+$$
+{1|3|all}
 \begin{aligned}
 \nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
 \nabla \cdot \vec{B} &= 0 \\
@@ -549,9 +551,9 @@ database "MySql" {
 Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
 
 ---
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
+
+foo: bar dragPos: square: 691,32,167,\_,-16
+
 ---
 
 # Draggable Elements
@@ -594,8 +596,9 @@ Double-click on the draggable elements to edit their positions.
 <v-drag-arrow pos="67,452,253,46" two-way op70 />
 
 ---
-src: ./pages/imported-slides.md
-hide: false
+
+src: ./pages/imported-slides.md hide: false
+
 ---
 
 ---
@@ -621,12 +624,18 @@ import { emptyArray, sayHello } from './external'
 
 sayHello()
 console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
+console.log(
+  emptyArray<number>(10).reduce(
+    (fib) => [...fib, fib.at(-1)! + fib.at(-2)!],
+    [1, 1],
+  ),
+)
 ```
 
 ---
-layout: center
-class: text-center
+
+layout: center class: text-center
+
 ---
 
 # Learn More
